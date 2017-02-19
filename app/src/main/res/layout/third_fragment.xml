@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed" />
+
+    <TextView
+        android:text="@string/pln_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#125688"
+        android:textSize="16sp"
+        android:id="@+id/text_pln"
+        android:labelFor="@+id/text_pln"
+        android:layout_below="@+id/text_uah"
+        android:layout_alignStart="@+id/text_uah"
+        android:layout_marginTop="53dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:background="@color/colorAccent"
+        android:ems="3"
+        android:id="@+id/ed_pln"
+        android:labelFor="@+id/ed_pln"
+        android:gravity="center_horizontal"
+        android:layout_alignBaseline="@+id/text_pln"
+        android:layout_alignBottom="@+id/text_pln"
+        android:layout_alignStart="@+id/ed_uah" />
+
+    <TextView
+        android:text="@string/uah_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#125688"
+        android:textSize="16sp"
+        android:id="@+id/text_uah"
+        android:layout_marginStart="25dp"
+        android:layout_alignBottom="@+id/sliding_tabs"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_convert"
+        android:textColor="#125688"
+        android:layout_below="@+id/ed_pln"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="3"
+        android:gravity="center_horizontal"
+        android:background="@color/colorAccent"
+        android:id="@+id/ed_uah"
+        android:labelFor="@+id/ed_uah"
+        android:layout_alignBottom="@+id/sliding_tabs"
+        android:layout_toEndOf="@+id/text_uah" />
+
+    <Button
+        android:text="@string/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#125688"
+        android:layout_marginTop="13dp"
+        android:id="@+id/btnClear"
+        android:layout_below="@+id/bt_convert"
+        android:layout_alignStart="@+id/bt_convert" />
+
+
+</RelativeLayout>
